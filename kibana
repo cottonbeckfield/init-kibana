@@ -21,7 +21,7 @@ PATH=/bin:/usr/bin:/sbin:/usr/sbin:$KIBANA_BIN
 KIBANA_BIN=/home/kibana_user/kibana/current/bin
 KIBANA_LOG=/var/log/kibana.log
 # Daemon name
-DAEMON=/home/kibana/kibana_user/kibana/current/bin/$NAME
+DAEMON=$KIBANA_BIN/$NAME
 # User to run as daemon process
 DAEMON_USER=kibana_user
 

@@ -11,13 +11,6 @@ Location of Kibana bin file:
 KIBANA_BIN=/home/kibana_user/kibana/current/bin
 ```
 
-Location where daemon runs out of:
-
-```
-DAEMON=/home/kibana/kibana_user/kibana/current/bin/$NAME
-```
-User to run Kibana as:
-
 ```
 DAEMON_USER=kibana_user
 ```
