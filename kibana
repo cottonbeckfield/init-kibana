@@ -15,11 +15,11 @@ PID_FOLDER=/var/run/kibana/
 # pid file for daemon
 PID_FILE=/var/run/kibana/$NAME.pid
 LOCK_FILE=/var/lock/subsys/$NAME
-PATH=/bin:/usr/bin:/sbin:/usr/sbin:$KIBANA_BIN
 
 # Configure the daemon & kibana variables based on Kibana location
 KIBANA_BIN=/home/kibana_user/kibana/current/bin
 KIBANA_LOG=/var/log/kibana.log
+PATH=/bin:/usr/bin:/sbin:/usr/sbin:$KIBANA_BIN
 # Daemon name
 DAEMON=$KIBANA_BIN/$NAME
 # User to run as daemon process
