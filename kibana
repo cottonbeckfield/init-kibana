@@ -11,20 +11,23 @@
 NAME=kibana
 DESC="Kibana4"
 PROG="/etc/init.d/kibana"
+
+# Configure location of Kibana bin
+KIBANA_BIN=/home/kibana_user/kibana/current/bin
+
+# PID Info
 PID_FOLDER=/var/run/kibana/
-# pid file for daemon
 PID_FILE=/var/run/kibana/$NAME.pid
 LOCK_FILE=/var/lock/subsys/$NAME
-
-# Configure the daemon & kibana variables based on Kibana location
-KIBANA_BIN=/home/kibana_user/kibana/current/bin
-KIBANA_LOG=/var/log/kibana.log
 PATH=/bin:/usr/bin:/sbin:/usr/sbin:$KIBANA_BIN
-# Daemon name
 DAEMON=$KIBANA_BIN/$NAME
-# User to run as daemon process
-DAEMON_USER=kibana_user
 
+# Configure User to run daemon process
+DAEMON_USER=kibana_user
+# Configure logging location
+KIBANA_LOG=/var/log/kibana.log
+
+# Begin Script
 RETVAL=0
 
 if [ `id -u` -ne 0 ]; then
